@@ -66,3 +66,7 @@ El cual se encarga de devolver los datos del servidor y promediarlos
 ```
 GET https://challenge-app-rm.herokuapp.com/stats
 ```
+
+#### Referencias
+- https://www.youtube.com/watch?v=kXhYu939_5s&t=573s 
+- https://es.stackoverflow.com/questions/32069/c%C3%B3mo-hago-para-llenar-una-matriz-de-4x5-de-la-forma-en-que-esta-la-foto
