@@ -11,7 +11,5 @@ import com.challenge.excepciones.FormatoInvalidoException;
 public interface IdentificarMutante {
 
 	int esMutante(String[] adn) throws ADNNullException, FormatoInvalidoException;
-	
-	int esMutante2(String[] adn) throws ADNNullException, FormatoInvalidoException;
 
 }

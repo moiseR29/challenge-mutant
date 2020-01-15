@@ -32,7 +32,7 @@ public class MutanteServiceImpl implements IMutanteService{
 		int existe = 0;
 		int contador;
 		
-		existe = identificarMutante.esMutante2(dna);
+		existe = identificarMutante.esMutante(dna);
 		
 		if(existe > 1) {
 			esMutante = true;
