@@ -12,7 +12,9 @@ const logger = loggerClass('server.js');
 
 server.use(urlencoded({ extended: false }));
 server.use(json());
-server.use(morgan('combined'));
+server.use(
+  morgan('combined', { skip: (req, res) => process.env.NODE_ENV === 'test' }),
+);
 
 server.get('/', initMessage);
 
