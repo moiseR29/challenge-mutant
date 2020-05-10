@@ -1,22 +1,24 @@
 import express, { json, urlencoded } from 'express';
 import morgan from 'morgan';
-import MainRouter from './Routes';
-import { loggerClass, initMessage, notFoundEndpoint } from './utils';
+import MainRouter from './routes';
 
-const app = express();
+import { loggerClass, initMessage, notFoundEndpoint } from './utils';
+import { initDataBase } from './database';
+
+const server = express();
 
 // eslint-disable-next-line no-unused-vars
 const logger = loggerClass('server.js');
 
-app.use(urlencoded({ extended: false }));
-app.use(json());
-// TODO resolve => morgan deprecated default format: use combined format
-app.use(morgan('combined'));
+server.use(urlencoded({ extended: false }));
+server.use(json());
+server.use(morgan('combined'));
 
-app.get('/', initMessage);
+server.get('/', initMessage);
 
-app.use('/', MainRouter);
+server.use('/', MainRouter);
 
-app.use('*', notFoundEndpoint);
+server.use('*', notFoundEndpoint);
 
-export default app;
+export const App = server;
+export const Database = { initDataBase };
