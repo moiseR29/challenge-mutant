@@ -49,7 +49,12 @@ las estadísticas de las verificaciones de ADN: {“count_mutant_dna”:40,
 ## Forma de Uso
 
 ## Tecnolologías
-Se uso NodeJs para realizar el codigo.
+Se uso NodeJs, Mongo y Docker para realizar el codigo.
+
+## Requisitos
+- Si no tenes mongodb instalado
+  - instalar docker
+  - en consola en la raiz del proyecto ```docker-compose up -d```
 
 ### Endpoint mutant
 El cual se encarga a partir de un array de string (String[]) comprabar si el adn es mutante o humano
