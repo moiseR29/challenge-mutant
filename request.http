@@ -9,3 +9,17 @@ content-type: application/json
 {
     "dna": ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
 }
+
+###
+
+POST http://localhost:3000/mutant HTTP/1.1
+content-type: application/json
+
+{
+    "dna": ["GTGCGA","CACTGC","TCATGG","CGAAAG","CCCGTA","TCGCTG"]
+}
+
+###
+
+GET http://localhost:3000/stats HTTP/1.1
+
